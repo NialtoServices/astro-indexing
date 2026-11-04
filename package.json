@@ -1,0 +1,41 @@
+{
+  "name": "@nialto-services/astro-indexing",
+  "version": "0.1.0",
+  "description": "Tell search engines about a built Astro site's pages, starting with IndexNow for Bing and the other participating engines.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.30.2",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NialtoServices/astro-indexing.git"
+  },
+  "bin": {
+    "astro-indexing": "bin/astro-indexing.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "prepublishOnly": "pnpm format:check && pnpm test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "prettier": "^3.9.9",
+    "vitest": "^5.0.2"
+  }
+}
